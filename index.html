@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patterns</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Increasing Triangle
+        document.write("<br>");
+        document.write("Increasing Triangle")
+        document.write("<br>");
+        document.write("<br>");
+
+        let increasingTriangle = '';
+        for (let i = 0; i < 8; i++) {
+            let increasingStar = '*';
+            increasingTriangle += increasingStar;
+            document.write(increasingTriangle);
+            document.write("<br>");
+        }
+
+
+
+        document.write("<br>");
+
+
+        //Decreasing Triangle
+        document.write("<br>");
+        document.write("Decreasing Triangle")
+        document.write("<br>");
+        document.write("<br>");
+        let decreasingTriangle = '';
+        for (let j = 0; j < 8; j++) {
+            for (let k = 8; k > j; k--) {
+                decreasingTriangle += '*';
+            }
+            document.write(decreasingTriangle);
+            document.write("<br>");
+            decreasingTriangle = '';
+        }
+        document.write("<br>");
+        document.write("Hill Pattern")
+        document.write("<br>");
+        document.write("<br>");
+
+
+        //Hill Pattern
+        let rows = 7;
+
+        for (let l = 0; l < rows; l++) {
+            let hillPattern = '';
+
+            for (let m = 0; m < rows - l - 1; m++) {
+                hillPattern += '&nbsp;&nbsp;';
+            }
+            for (let n = 0; n < 2 * l + 1; n++) {
+                hillPattern += '*';
+            }
+            hillPattern += '<br>';
+
+            document.write(hillPattern);
+        }
+
+        document.write("<br>");
+        document.write("Reverse Hill Pattern")
+        document.write("<br>");
+        document.write("<br>");
+
+        const reverseRows = 7;
+
+        for (let i = 0; i < reverseRows; i++) {
+            let hillPattern = '';
+
+            for (let j = 0; j < i; j++) {
+                hillPattern += '&nbsp;&nbsp;';
+            }
+            for (let k = 0; k < 2 * (reverseRows - i) - 1; k++) {
+                hillPattern += '*';
+            }
+            hillPattern += '<br>'; 
+
+            document.write(hillPattern);
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
